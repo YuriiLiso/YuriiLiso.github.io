@@ -10,6 +10,15 @@ body {
   background: #F3F7FA;
 }
 
+.main {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.main__container {
+  padding: 0 7%;
+}
+
 .gradient1 {
   position: absolute;
   top: 152px;
@@ -21,7 +30,7 @@ body {
 
 .gradient2 {
   position: absolute;
-  top: 55%;
+  top: 25%;
   left: 50%;
   right: 15%;
   background: radial-gradient(50% 50% at 50% 50%, rgba(109, 60, 229, 0.04) 0%, rgba(109, 60, 229, 0) 100%);
@@ -32,7 +41,7 @@ body {
   position: absolute;
   left: 40%;
   right: 0;
-  bottom: 30%;
+  bottom: 80%;
   background: radial-gradient(50% 50% at 50% 50%, rgba(109, 60, 229, 0.04) 0%, rgba(109, 60, 229, 0) 100%);
   box-shadow: 50px 4px 250px 40px rgba(109, 60, 229, 0.3);
 }
@@ -41,7 +50,7 @@ body {
   position: absolute;
   left: 24%;
   right: 25%;
-  bottom: 5%;
+  bottom: 80%;
   background: radial-gradient(50% 50% at 50% 50%, rgba(109, 60, 229, 0.3) 0%, rgba(109, 60, 229, 0) 100%);
   box-shadow: 0px 4px 300px 40px rgba(62, 34, 133, 0.3);
 }
@@ -120,14 +129,8 @@ body {
   color: #fff;
 }
 
-.main {
-  height: 680px;
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
-.main__container {
-  padding: 0 7%;
+.where-happens {
+  height: 650px;
 }
 
 .icons-up-title {
@@ -159,6 +162,28 @@ body {
   bottom: 0;
   left: 0;
   background-image: url(../../img/church.png);
+  -webkit-animation: moveChurch 1.3s linear infinite alternate;
+          animation: moveChurch 1.3s linear infinite alternate;
+}
+
+@-webkit-keyframes moveChurch {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 2%;
+  }
+}
+
+@keyframes moveChurch {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 2%;
+  }
 }
 
 .icons__tooth {
@@ -168,6 +193,27 @@ body {
   left: 16%;
   top: 0;
   background-image: url(../../img/tooth.png);
+  animation: moveTooth 1.3s linear infinite alternate-reverse;
+}
+
+@-webkit-keyframes moveTooth {
+  from {
+    left: 16%;
+  }
+
+  to {
+    left: 18%;
+  }
+}
+
+@keyframes moveTooth {
+  from {
+    left: 16%;
+  }
+
+  to {
+    left: 18%;
+  }
 }
 
 .icons__target {
@@ -177,6 +223,27 @@ body {
   bottom: 0;
   right: 15%;
   background-image: url(../../img/target.png);
+  animation: moveTarget 1.3s linear infinite alternate-reverse;
+}
+
+@-webkit-keyframes moveTarget {
+  from {
+    right: 15%;
+  }
+
+  to {
+    right: 13%;
+  }
+}
+
+@keyframes moveTarget {
+  from {
+    right: 15%;
+  }
+
+  to {
+    right: 13%;
+  }
 }
 
 .icons__heart {
@@ -186,6 +253,27 @@ body {
   height: 40px;
   width: 80px;
   background-image: url(../../img/heart.png);
+  animation: moveHeart 1.3s linear infinite alternate-reverse;
+}
+
+@-webkit-keyframes moveHeart {
+  from {
+    left: 6%;
+  }
+
+  to {
+    left: 8%;
+  }
+}
+
+@keyframes moveHeart {
+  from {
+    left: 6%;
+  }
+
+  to {
+    left: 8%;
+  }
 }
 
 .icons__bag {
@@ -195,6 +283,28 @@ body {
   height: 40px;
   width: 80px;
   background-image: url(../../img/bag.png);
+  -webkit-animation: moveBag 1.3s linear infinite alternate;
+          animation: moveBag 1.3s linear infinite alternate;
+}
+
+@-webkit-keyframes moveBag {
+  from {
+    right: 20%;
+  }
+
+  to {
+    right: 22%;
+  }
+}
+
+@keyframes moveBag {
+  from {
+    right: 20%;
+  }
+
+  to {
+    right: 22%;
+  }
 }
 
 .icons__lamp {
@@ -204,6 +314,27 @@ body {
   height: 40px;
   width: 80px;
   background-image: url(../../img/lamp.png);
+  animation: moveLamp 1.3s linear infinite alternate-reverse;
+}
+
+@-webkit-keyframes moveLamp {
+  from {
+    right: 7%;
+  }
+
+  to {
+    right: 9%;
+  }
+}
+
+@keyframes moveLamp {
+  from {
+    right: 7%;
+  }
+
+  to {
+    right: 9%;
+  }
 }
 
 .title {
@@ -257,4 +388,67 @@ body {
   border: 1px #286DF6 solid;
   border-radius: 6px;
   color: #286DF6;
+}
+
+.solity {
+  height: 1034px;
+}
+
+.solity__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.solity-title {
+  font-size: 46px;
+  font-weight: 700;
+  padding-bottom: 130px;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 900px;
+}
+
+.items__solution {
+  width: 100%;
+}
+
+.problem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.problem__container {
+  height: 100%;
+  min-width: 290px;
+  max-width: 613px;
+}
+
+.problem__text {
+  height: 100%;
+}
+
+.images__up {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+}
+
+.images1 {
+  background-image: url(../../img/man1.png);
+}
+
+.images__center {
+  display: flex;
+}
+
+.images__down {
+  display: flex;
 }
