@@ -426,29 +426,92 @@ body {
 }
 
 .problem__container {
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  min-width: 290px;
+  width: 100%;
   max-width: 613px;
+  min-width: 290px;
 }
 
 .problem__text {
   height: 100%;
 }
 
-.images__up {
+.images__up,
+.images__down {
   display: flex;
   justify-content: space-between;
-  border: 1px solid;
+  height: 120px;
+  padding: 0 10%;
 }
 
-.images1 {
+.images1,
+.images2,
+.images3,
+.images4 {
+  height: 120px;
+  width: 120px;
   background-image: url(../../img/man1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 3;
 }
 
-.images__center {
-  display: flex;
+.images2 {
+  background-image: url(../../img/woman2.png);
+}
+
+.images3 {
+  background-image: url(../../img/woman1.png);
+}
+
+.images4 {
+  background-image: url(../../img/man2.png);
 }
 
 .images__down {
-  display: flex;
+  height: 120px;
+}
+
+.vectors {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0 10%;
+}
+
+.vectors__1,
+.vectors__2,
+.vectors__3,
+.vectors__4 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.vectors__1 {
+  top: -50px;
+  left: 15%;
+  background-image: url(../../img/Vector1.png);
+}
+
+.vectors__2 {
+  background-image: url(../../img/Vector2.png);
+  bottom: -50px;
+  right: -30%;
+}
+
+.vectors__3 {
+  background-image: url(../../img/Vector3.png);
+  bottom: -50px;
+  left: 16%;
+}
+
+.vectors__4 {
+  background-image: url(../../img/Vector4.png);
+  top: -80px;
+  right: -32%;
 }
