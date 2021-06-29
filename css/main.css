@@ -390,10 +390,6 @@ body {
   color: #286DF6;
 }
 
-.solity {
-  height: 1034px;
-}
-
 .solity__container {
   display: flex;
   flex-direction: column;
@@ -410,14 +406,10 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 900px;
 }
 
-.items__solution {
-  width: 100%;
-}
-
-.problem {
+.problem,
+.solution {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -425,94 +417,208 @@ body {
   width: 100%;
 }
 
-.problem__container {
+.problem__container,
+.solution__container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: space-between;
+  height: 506px;
   width: 100%;
   max-width: 613px;
   min-width: 290px;
+  padding: 15% 7%;
 }
 
-.problem__text {
-  height: 100%;
-}
-
-.images__up,
-.images__down {
+.problem__text,
+.solution__text {
   display: flex;
-  justify-content: space-between;
-  height: 120px;
-  padding: 0 10%;
+  flex-direction: column;
+  align-items: center;
+  max-width: 613px;
+  height: 100%;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
 }
 
-.images1,
-.images2,
-.images3,
-.images4 {
-  height: 120px;
-  width: 120px;
-  background-image: url(../../img/man1.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 3;
-}
-
-.images2 {
-  background-image: url(../../img/woman2.png);
-}
-
-.images3 {
-  background-image: url(../../img/woman1.png);
-}
-
-.images4 {
-  background-image: url(../../img/man2.png);
-}
-
-.images__down {
-  height: 120px;
+.problem-title,
+.solution-title {
+  margin: 50px 0 16px 0;
+  font-size: 46px;
+  font-weight: 700;
 }
 
 .vectors {
   position: relative;
-  height: 100%;
+  height: 346px;
   width: 100%;
-  padding: 0 10%;
 }
 
 .vectors__1,
 .vectors__2,
 .vectors__3,
-.vectors__4 {
+.vectors__4,
+.vectors__5,
+.vectors__6,
+.vectors__7,
+.vectors__8 {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
+  max-height: 100%;
+  z-index: -1;
 }
 
 .vectors__1 {
-  top: -50px;
-  left: 15%;
-  background-image: url(../../img/Vector1.png);
+  top: -10%;
+  left: -5%;
 }
 
 .vectors__2 {
-  background-image: url(../../img/Vector2.png);
-  bottom: -50px;
-  right: -30%;
-  left: 30%;
+  bottom: -20%;
+  right: 0%;
 }
 
 .vectors__3 {
-  background-image: url(../../img/Vector3.png);
-  bottom: -50px;
-  left: 16%;
+  bottom: -15%;
+  left: 0%;
 }
 
 .vectors__4 {
-  background-image: url(../../img/Vector4.png);
-  top: -80px;
-  right: -32%;
+  top: -25%;
+  right: 0%;
+}
+
+.vectors__5 {
+  bottom: 8%;
+  left: -15%;
+}
+
+.vectors__6 {
+  top: 53%;
+  left: -15%;
+}
+
+.vectors__7 {
+  bottom: 43%;
+  left: -20%;
+}
+
+.vectors__8 {
+  top: 5%;
+  left: -25%;
+}
+
+.problem-img__1,
+.problem-img__2,
+.problem-img__3,
+.problem-img__4 {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.problem-img__1:hover,
+.problem-img__2:hover,
+.problem-img__3:hover,
+.problem-img__4:hover {
+  transform: scale(1.2);
+}
+
+.problem-img__1 {
+  top: -50%;
+  left: -15%;
+}
+
+.problem-img__2 {
+  left: -15%;
+  bottom: -55%;
+}
+
+.problem-img__3 {
+  top: -50%;
+  right: -15%;
+}
+
+.problem-img__4 {
+  right: -15%;
+  bottom: -55%;
+}
+
+.problem-img__stop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.solution__container {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.solution-img {
+  position: relative;
+  width: 100%;
+}
+
+.solution-img {
+  position: relative;
+}
+
+.solution-img__5,
+.solution-img__6,
+.solution-img__7,
+.solution-img__8 {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.solution-img__5:hover,
+.solution-img__6:hover,
+.solution-img__7:hover,
+.solution-img__8:hover {
+  transform: scale(1.2);
+}
+
+.solution-img__5 {
+  top: 0%;
+  left: 40%;
+}
+
+.solution-img__6 {
+  bottom: 40%;
+  left: 10%;
+}
+
+.solution-img__7 {
+  top: 45%;
+  right: -10%;
+}
+
+.solution-img__8 {
+  bottom: 0%;
+  left: 25%;
+}
+
+.solution-phone-img {
+  cursor: pointer;
+  transition: 1s;
+}
+
+.solution-phone-img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1400px) {
+  .items {
+    flex-direction: column;
+  }
 }
