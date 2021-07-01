@@ -20,7 +20,6 @@ let footTit = document.querySelectorAll('.footer-titles');
 
 for (let i = 0; i < footTit.length; i++) {
   footTit[i].addEventListener('click', () => {
-    footTit[i].classList.toggle('footer-titles--active')
+    footTit[i].classList.add('footer-titles--active');
   });
 }
-
